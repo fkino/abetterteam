@@ -29,8 +29,11 @@ post '/result' do
       params_index = "#{quiz["category"]}#{index}"
       point += item["#{params[params_index]}_point"].to_i
     end
-    instance_variable_set("@#{quiz["category"]}_point" ,point)
+    quiz["point"] = point.to_s
   end
+
+  @titles = @quiz.map{|quiz| quiz["title"]}.join("|")
+  @points = @quiz.map{|quiz| quiz["point"]}.join(",") + "," + @quiz[0]["point"]
 
   haml :result
 end

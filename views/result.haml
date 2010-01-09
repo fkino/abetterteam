@@ -1,7 +1,10 @@
 %h1 Result
 
+%p
+  %img{:src => "http://chart.apis.google.com/chart?cht=r&chs=540x540&chd=t:#{@points}&chds=0,100&chco=000000&chls=5.0,4.0,0.0&chxt=x,y&chxl=0:|#{@titles}|1:||25|50|75|100&chm=r,FF000070,0,0.0,0.75|r,FFFF0070,0,0.75,0.96|r,00FF0070,0,0.96,1.0"}
+
 - @quiz.each do |quiz|
   %p
     = quiz["title"]
-    = instance_variable_get("@#{quiz["category"]}_point")
+    = quiz["point"]
 
