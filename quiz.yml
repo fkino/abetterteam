@@ -1,0 +1,209 @@
+- category: thinking
+  title: 考えること
+  items:
+  - question: プログラマはすべてのプロダクトコードを他のプログラマ（少なくとも1 名）にチェックしてもらっていますか？
+    yes_point: 5
+    no_point: 0
+    practice: ペアプログラミング
+  - question: チームメンバー全員が、使うと合意したすべてのプラクティスを一貫して厳格によく考えて適用していますか？
+    yes_point: 75
+    no_point: 0
+    practice: ペアプログラミング、根本原因分析、ふりかえり
+  - question: チームメンバーは普段、仕事に集中して参加していますか？
+    yes_point: 5
+    no_point: 0
+    practice: 活き活きとした仕事
+  - question: チームメンバーのほぼ全員がチーム目標の達成に向かって前進していると感じていますか？
+    yes_point: 4
+    no_point: 0
+    practice: 情報満載の仕事場
+  - question: 四半期に1回以上、何らかの問題が再発したことがありますか？
+    yes_point: 0
+    no_point: 5
+    practice: 根本原因分析、ふりかえり
+  - question: 1か月に少なくとも一度、チームは何らかの方法でプロセスを改善していますか？
+    yes_point: 5
+    no_point: 0
+    practice: ふりかえり
+- category: collaborationg
+  title: 協力すること
+  items:
+  - question: プログラマは質問の答えを得ようとするのではなく、いつも見当をつけようとしていますか？
+    yes_point: 0
+    no_point: 75
+    practice: XPチーム
+  - question: プログラマはいつも、必要だとわかったらすぐに（要求を出して返事を待たなくても）情報を手に入れることができますか？
+    yes_point: 4
+    no_point: 0
+    practice: 全員同席
+  - question: チームメンバーはほとんどの場合、混乱することなくコミュニケーションできていますか？
+    yes_point: 4
+    no_point: 0
+    practice: 全員同席、ユビキタス言語
+  - question: チームメンバーのほぼ全員がお互いを信頼していますか？
+    yes_point: 4
+    no_point: 0
+    practice: XPチーム、全員同席
+  - question: チームメンバーは普段、他のチームメンバーが何に取り組んでいるのか知っていますか？
+    yes_point: 1
+    no_point: 0
+    practice: スタンドアップミーティング
+  - question: 1か月に少なくとも一度、チームはステークホルダーに進捗をデモしていますか？
+    yes_point: 4
+    no_point: 0
+    practice: イテレーションデモ、報告
+  - question: 1か月に少なくとも一度、チームはステークホルダーに動くソフトウェアを提供していますか？
+    yes_point: 1
+    no_point: 0
+    practice: イテレーションデモ
+  - question: 重要なステークホルダー全員が現在のチームの進捗に満足していますか？
+    yes_point: 3
+    no_point: 0
+    practice: 報告、イテレーションデモ、真の顧客の参加
+  - question: 重要なステークホルダー全員がチームの納品する能力を信頼していますか？
+    yes_point: 3
+    no_point: 0
+    practice: 信頼、報告
+- category: releasing
+  title: リリースすること
+  items:
+  - question: チームのプログラマなら誰でも、コマンド1つで簡単にソフトウェアをビルドしテストして明確な成功/ 失敗の結果を得ることができますか？
+    yes_point: 25
+    no_point: 0
+    practice: 10分ビルド
+  - question: チームのプログラマなら誰でも、コマンド1つで簡単にテスト済みの納品可能なリリースをビルドすることができますか？
+    yes_point: 5
+    no_point: 0
+    practice: 10分ビルド
+  - question: チームメンバー全員がプロジェクトに関連するすべての成果物（自動生成されるものは除く）に対してバージョン管理を行っていますか？
+    yes_point: 25
+    no_point: 0
+    practice: バージョン管理
+  - question: プログラマはバージョン管理システムからまっさらな環境にチェックアウトをするだけで、どんな開発マシンでもソフトウェアをビルドしテストすることができますか？
+    yes_point: 25
+    no_point: 0
+    practice: バージョン管理
+  - question: プログラマが最新のコードを入手すると、ほとんどいつでもビルドが成功してテストをすべてパスすると確信できますか？
+    yes_point: 5
+    no_point: 0
+    practice: 継続的インテグレーション
+  - question: 1日に少なくとも一度、プログラマ全員が自分の作業をコード本体にインテグレーションしていますか？
+    yes_point: 4
+    no_point: 0
+    practice: 継続的インテグレーション
+  - question: インテグレーションのビルドは10分以内に完了しますか？
+    yes_point: 4
+    no_point: 0
+    practice: 10分ビルド
+  - question: プログラマのほぼ全員がコードに関して感性を共有していますか？
+    yes_point: 1
+    no_point: 0
+    practice: コーディング標準
+  - question: プログラマは普段もともと誰が書いたかにかかわらず、チャンスがあればコードを改良しますか？
+    yes_point: 4
+    no_point: 0
+    practice: コードの共同所有、リファクタリング
+  - question: チームが仕事を仕上げた時点で、バグの発生は1か月に5個以下になっていますか？
+    yes_point: 1
+    no_point: 0
+    practice: バグなし
+- category: planning
+  title: 計画すること
+  items:
+  - question: チームメンバーのほぼ全員が、何を何のために作っていて、ステークホルダーは何を成功と見なすのかについて理解していますか？
+    yes_point: 25
+    no_point: 0
+    practice: ビジョン
+  - question: 重要なステークホルダー全員が、チームが何を何のために作っていて、ステークホルダーが共通して何を成功だと見なしているかについて合意していますか？
+    yes_point: 25
+    no_point: 0
+    practice: ビジョン
+  - question: チームには成功を達成するための計画がありますか？
+    yes_point: 4
+    no_point: 0
+    practice: リリース計画
+  - question: チームは定期的に新しい情報を探して、その情報を使って成功するために計画を改善していますか？
+    yes_point: 2
+    no_point: 0
+    practice: リリース計画
+  - question: チームの計画づくりにはプログラマだけでなくビジネスの関係者の専門知識を取り入れていますか？また、参加したほぼ全員が計画は達成可能だということに合意していますか？
+    yes_point: 3
+    no_point: 0
+    practice: 計画ゲーム
+  - question: チームの計画のほぼ全項目が、顧客中心で、結果優先で、順番に依存しないようになっていますか？
+    yes_point: 4
+    no_point: 0
+    practice: ストーリー
+  - question: チームは所定のタイムボックスの間隔（1か月以上空けずに）で、進捗を計画と比較して、適宜計画を修正していますか？
+    yes_point: 4
+    no_point: 0
+    practice: イテレーション
+  - question: チームはタイムボックスの期間が始まる前に納品のコミットメントをして、ほとんどいつもコミットメント通りに納品していますか？
+    yes_point: 4
+    no_point: 0
+    practice: イテレーション、「完全Done」、ゆとり、見積り
+  - question: 計画項目に「完了」マークを付けた後、例えば、バグ修正やリリースの洗練など、チームメンバーに予期せぬ追加の作業が発生することがありますか？
+    yes_point: 0
+    no_point: 25
+    practice: 「完全Done」
+  - question: チームはほぼ常にそのリリースをコミットメント通りに納品していますか？
+    yes_point: 3
+    no_point: 0
+    practice: リスク管理
+- category: developing
+  title: 開発すること
+  items:
+  - question: プログラマはほぼ常に最近書いたコードが意図した通りに動くという確信を持っていますか？
+    yes_point: 25
+    no_point: 0
+    practice: テスト駆動開発
+  - question: プログラマ全員が安心してコードを変更できますか？
+    yes_point: 25
+    no_point: 0
+    practice: テスト駆動開発
+  - question: プログラマがデバッグに10分以上かかるようなことが1週間に1回以上ありますか？
+    yes_point: 0
+    no_point: 3
+    practice: テスト駆動開発
+  - question: プログラマ全員が週を追うごとに少なくとも少しはコードがよくなっていることに同意できますか？
+    yes_point: 25
+    no_point: 0
+    practice: リファクタリング、インクリメンタルな設計とアーキテクチャ
+  - question: チームはイテレーションごとに顧客価値のあるストーリーを納品していますか？
+    yes_point: 3
+    no_point: 0
+    practice: イテレーション、インクリメンタルな設計とアーキテクチャ
+  - question: 予期せぬ設計変更があると、既存のコードに対する変更が難しかったり高いコストがかかったりしますか？
+    yes_point: 0
+    no_point: 3
+    practice: シンプルな設計
+  - question: プログラマは技術的な問題に関する情報を得るために動くコードを使っていますか？
+    yes_point: 1
+    no_point: 0
+    practice: スパイクソリューション
+  - question: プログラマは最初にパフォーマンステストをせずにコードを最適化しますか？
+    yes_point: 0
+    no_point: 3
+    practice: パフォーマンスの最適化
+  - question: 顧客の承認なしにプログラマは常にコードの最適化に1時間以上費やしていますか？
+    yes_point: 0
+    no_point: 3
+    practice: パフォーマンスの最適化
+  - question: オンサイト顧客はイテレーションの終わりにソフトウェアの動きに驚くようなことがめったにありませんか？
+    yes_point: 4
+    no_point: 0
+    practice: インクリメンタルな要件
+  - question: 完成したストーリーのビジネスロジックに1か月あたり1つ以上のバグが見つかりますか？
+    yes_point: 0
+    no_point: 3
+    practice: 顧客テスト
+  - question: チームメンバーの誰かがチームが作り出すソフトウェアの品質について不安を持っていますか？
+    yes_point: 0
+    no_point: 1
+    practice: 探索的テスト、イテレーションデモ、真の顧客の参加
+
+# 和書名: 『アート・オブ・アジャイルデベロップメント』
+# 版元名: オライリー・ジャパン
+# 著者名: Shore James, Warden Shane
+# 監訳、訳者名: 木下 史彦, 平鍋 健児, 笹井 崇司
+

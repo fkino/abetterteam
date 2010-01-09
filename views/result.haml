@@ -1,0 +1,7 @@
+%h1 Result
+
+- @quiz.each do |quiz|
+  %p
+    = quiz["title"]
+    = instance_variable_get("@#{quiz["category"]}_point")
+
