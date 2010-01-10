@@ -12,16 +12,28 @@ helpers do
   end
 
   def encode_param(params)
-    Base64.encode64(params.map do |key, value|
-      "#{key}=#{value}"
-    end.join("&"))
+    choice = {"yes" => "1", "no" => "0"}
+    choice.default = "0"
+    str = ""
+    @quiz.each do |quiz|
+      quiz["items"].each_with_index do |item, index|
+        str += choice[params["#{quiz["category"]}#{index}"]]
+      end
+    end
+    Base64.encode64(Integer("0b" + str.reverse).to_s(16))
   end
 
   def decode_param(str)
+    choice = {"1" => "yes", "0" => "no"}
+    choice.default = "no"
     params = {}
-    Base64.decode64(str).split("&").each do |param|
-      key,value = param.split("=")
-      params[key] = value
+    i = 0
+    str = Base64.decode64(str).hex.to_s(2).reverse
+    @quiz.each do |quiz|
+      quiz["items"].each_with_index do |item, index|
+        params["#{quiz["category"]}#{index}"] = choice[str[i, 1]]
+        i += 1
+      end
     end
     params
   end
@@ -42,6 +54,7 @@ get '/new' do
 end
 
 post '/result' do
+  load_quiz
   redirect '/quiz/' + encode_param(params)
 end
 
