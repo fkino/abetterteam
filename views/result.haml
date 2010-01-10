@@ -17,12 +17,18 @@
       %li 97、98、99点：できれば改善しよう（緑信号）
       %li 100点：これ以上の改善すべき点はない
 
+%div.permalink
+  - permalink_url = "http://#{env['HTTP_HOST']}/quiz/#{params['result']}"
+  Permalink:
+  %a{:href => permalink_url}
+    = permalink_url
+
 %div.detail
   - @quiz.each do |quiz|
     %h2= quiz["title"]
     - quiz["items"].each_with_index do |item, index|
       %div.item
-        - answer = params["#{quiz["category"]}#{index}"]
+        - answer = @result["#{quiz["category"]}#{index}"]
         %div.question
           = item["question"]
         %div.answer
