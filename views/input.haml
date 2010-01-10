@@ -1,13 +1,13 @@
-%h1 Input
-
 %form{:action=>"/result", :method=>"post"}
   - @quiz.each do |quiz|
     %h2= quiz["title"]
     - quiz["items"].each_with_index do |item, index|
-      %p
-        = item["question"]
-        - ["yes", "no"].each do |choice|
-          %input{:type=>"radio", :name=>"#{quiz["category"]}#{index}", :value=>choice, :checked=> instance_variable_get("@#{quiz["category"]}#{index}")==choice}
-          = choice
-  %input{:type=>"submit", :value=>"Submit"}
+      %div.item
+        %div.question
+          = item["question"]
+        %div.choice
+          - [{:en => "yes", :jp => "はい"}, {:en => "no", :jp => "いいえ"}].each do |choice|
+            %input{:type => "radio", :name => "#{quiz["category"]}#{index}", :value => choice[:en], :checked => instance_variable_get("@#{quiz["category"]}#{index}") == choice[:en]}
+              = choice[:jp]
+  %input{:type=>"submit", :value=>"評価結果を見る"}
 

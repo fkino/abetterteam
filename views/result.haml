@@ -1,10 +1,36 @@
-%h1 Result
-
-%p
+%div.chart
   %img{:src => "http://chart.apis.google.com/chart?cht=r&chs=540x540&chd=t:#{@points}&chds=0,100&chco=000000&chls=5.0,4.0,0.0&chxt=x,y&chxl=0:|#{@titles}|1:||25|50|75|100&chm=r,FF000070,0,0.0,0.75|r,FFFF0070,0,0.75,0.96|r,00FF0070,0,0.96,1.0"}
 
-- @quiz.each do |quiz|
-  %p
-    = quiz["title"]
-    = quiz["point"]
+%div.result
+  %div.point
+    %h2 結果
+    - @quiz.each do |quiz|
+      %p
+        = quiz["title"]
+        ：
+        = quiz["point"]
+  %div.note
+    %h2 得点にによって次のようなリスクがある
+    %ul
+      %li 75点以下：すぐに改善が必要だ（赤信号）
+      %li 76点から96点：改善が必要だ（黄信号）
+      %li 97、98、99点：できれば改善しよう（緑信号）
+      %li 100点：これ以上の改善すべき点はない
+
+%div.detail
+  - @quiz.each do |quiz|
+    %h2= quiz["title"]
+    - quiz["items"].each_with_index do |item, index|
+      %div.item
+        - answer = params["#{quiz["category"]}#{index}"]
+        %div.question
+          = item["question"]
+        %div.answer
+          = {"yes" => "はい", "no" => "いいえ"}[answer]
+        %div.point
+          = item["#{answer}_point"]
+        %div.maxpoint
+          = [item["yes_point"], item["no_point"]].max
+        %div.practice
+          = item["practice"]
 

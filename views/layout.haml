@@ -3,9 +3,21 @@
 
 %html
   %head
-    %title A Better Team
+    %title a better team
     %meta{:"http-equiv"=>"Content-Type", :content=>"text/html", :charset=>"utf-8"}
     %link{:rel=>"stylesheet", :type=>"text/css", :href=>"/style.css"}
   %body
-    != yield
+    .header
+      %h1 abetterteam
+      %hr
+    .content
+      != yield
+    .footer
+      %hr
+      Managed by
+      %a{:href => 'http://fkino.net'} Fumihiko Kinoshita
+      |
+      %a{:href => 'http://twitter.com/fkino'} Feedback
+      | Quiz by
+      %a{:href => 'http://www.amazon.co.jp/o/ASIN/4873113954/fkino-22'} The Art of Agile Development
 
