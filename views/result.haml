@@ -5,10 +5,11 @@
   %div.point
     %h2 結果
     - @quiz.each do |quiz|
-      %p
-        = quiz["title"]
-        ：
-        = quiz["point"]
+      %ul
+        %li
+          = quiz["title"]
+          ：
+          = quiz["point"]
   %div.note
     %h2 得点にによって次のようなリスクがある
     %ul
