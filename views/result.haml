@@ -32,18 +32,9 @@
         %th.practice XPプラクティス
       - quiz["items"].each_with_index do |item, index|
         - answer = @result["#{quiz["category"]}#{index}"]
-        - if index % 2 == 1
-          %tr.color1
-            %td.question= item["question"]
-            %td.answer= {"yes" => "はい", "no" => "いいえ"}[answer]
-            %td.point= item["#{answer}_point"]
-            %td.maxpoint= [item["yes_point"], item["no_point"]].max
-            %td.practice= item["practice"]
-        - else
-          %tr.color2
-            %td.question= item["question"]
-            %td.answer= {"yes" => "はい", "no" => "いいえ"}[answer]
-            %td.point= item["#{answer}_point"]
-            %td.maxpoint= [item["yes_point"], item["no_point"]].max
-            %td.practice= item["practice"]
-
+        %tr{:class => index.odd? ? 'color1' : 'color2'}
+          %td.question= item["question"]
+          %td.answer= {"yes" => "はい", "no" => "いいえ"}[answer]
+          %td.point= item["#{answer}_point"]
+          %td.maxpoint= [item["yes_point"], item["no_point"]].max
+          %td.practice= item["practice"]
