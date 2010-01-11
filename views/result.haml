@@ -8,12 +8,12 @@
       - @quiz.each do |quiz|
         %li #{quiz['title']} : #{quiz['point']}点
   .note
-    %h2 得点にによって次のようなリスクがある
+    %h2 得点によって次のようなリスクがある
     %ul
       %li 75点以下：すぐに改善が必要だ（赤信号）
       %li 76点から96点：改善が必要だ（黄信号）
       %li 97、98、99点：できれば改善しよう（緑信号）
-      %li 100点：これ以上の改善すべき点はない
+      %li 100点：これ以上、改善すべき点はない
 
 .permalink
   - permalink_url = "http://#{env['HTTP_HOST']}/quiz/#{params['result']}"
