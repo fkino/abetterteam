@@ -6,7 +6,8 @@
         .question= item["question"]
         .choice
           - [{:en => "yes", :jp => "はい"}, {:en => "no", :jp => "いいえ"}].each do |choice|
-            %input{:type => "radio", :name => "#{quiz["category"]}#{index}", :value => choice[:en], :checked => instance_variable_get("@#{quiz["category"]}#{index}") == choice[:en]}
+            %label
+              %input{:type => "radio", :name => "#{quiz["category"]}#{index}", :value => choice[:en], :checked => instance_variable_get("@#{quiz["category"]}#{index}") == choice[:en]}
               = choice[:jp]
   %input{:type=>"submit", :value=>"評価結果を見る"}
 
