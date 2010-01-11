@@ -64,12 +64,10 @@ get '/quiz/:result' do
   @result = decode_param(params["result"])
 
   @quiz.each do |quiz|
-    point = 0
-    quiz["items"].each_with_index do |item, index|
+    quiz["point"] = quiz["items"].each_with_index.inject(0) {|point, (item, index)|
       params_index = "#{quiz["category"]}#{index}"
-      point += item["#{@result[params_index]}_point"].to_i
-    end
-    quiz["point"] = point.to_s
+      point + item["#{@result[params_index]}_point"].to_i
+    }.to_s
   end
 
   @titles = @quiz.map{|quiz| quiz["title"]}.join("|")
@@ -77,4 +75,3 @@ get '/quiz/:result' do
 
   haml :result
 end
-
