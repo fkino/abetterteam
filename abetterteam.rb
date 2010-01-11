@@ -53,7 +53,7 @@ get '/new' do
   haml :input
 end
 
-post '/result' do
+post '/create' do
   load_quiz
   redirect '/quiz/' + encode_param(params)
 end
