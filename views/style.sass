@@ -1,79 +1,191 @@
 body
-  :margin 0px
+  :margin 0px 0px 0px 30px
   :padding 0px
+
+a
+  :text-decoration none
+  :color #3184CD
 
 .header
   :width 800px
-  :height 100px
-  :background-color #CCFFCC
+  :height 80px
+  :border-width 0px 0px 1px 0px
+  :border-style solid
+  :border-color #8E8888
+
+  h1
+    :margin 0px
+    :padding 0px
+    :color #3184CD
+    :font-size 48px
+
+    .big
+      :font-weight bold
+      :font-size 54px
 
 .content
   :position relative
+  :margin 2px 0px 10px 0px
   :width 800px
-  :background-color #FFFFCC
+
+  h2
+    :margin 10px 0px 0px 0px
+    :padding 0px
+    :border-width 0px 0px 2px 0px
+    :border-style solid
+    :border-color #3184CD
+
+  p.explain
+    :margin 0px 0px 20px 0px
+    :padding 0px 0px 0px 140px
+    :font-size 14px
+
+    a.new
+      :padding 4px
+      :outline 2px #8E8888 solid
+      :color #529214
+      :font-size 28px
+
+    a.new:hover
+      :background-color #E6EFC2
 
   .left
     :float left
+    :margin 0px 0px 20px 0px
+    :padding 0px 0px 0px 140px
+    :font-size 14px
 
   .right
     :text-align right
 
-  .clearLeft
+    a
+      :color #FFFFFF
+
+  .clear-left
     :clear left
 
+  form
+    .item
+      :margin 20px 0px 20px 0px
+      :padding 10px 30px 10px 30px
+      :background-color #E5ECF9
+      :font-size 14px
+
+      .question
+        :border-bottom 1px #000000 dashed
+
+      .choice
+        :padding 0px 0px 0px 20px
+
+    input
+      :padding 4px
+      :border 2px #8E8888 solid
+      :color #529214
+      :font-size 28px
+
+    input:hover
+      :background-color #E6EFC2
+      :cursor pointer
+
   .chart
+    :padding 20px 0px 20px 0px
     :width 540px
-    :height 540px
+    :height 440px
     :float left
-    :background-color #FFAC99
 
   .result
     :width 260px
-    :height 540px
+    :height 440px
     :float right
-    :background-color #CCCCFF
+    :font-size 14px
+
+    h2
+      :font-size 18px
+
+    .point
+      ul
+        :list-style-type none
+        :color #3184CD
+        :font-size 18px
+        :font-weight bold
 
   .permalink
     :position relative
-    :width 800px
-    :height 50px
-    :background-color #CC9999
     :clear both
+    :margin 20px 0px 20px 0px
+    :padding 10px 30px 10px 30px
+    :background-color #E5ECF9
+    :font-size 14px
 
   .detail
+    :position relative
     :width 800px
-    :background-color #CCFFCC
 
     h2
       :clear left
+      :font-size 18px
 
-    .item
+    table
+      :margin 4px 0px 20px 0px
       :width 800px
+      :font-size 12px
+      :border-collapse collapse
 
-      .question
-        :float left
-        :width 500px
+    tr.color1
+      :background-color #EEFFFF
 
-      .answer
-        :float left
-        :width 50px
+    tr.color2
+      :background-color #E5ECF9
 
-      .point
-        :float left
-        :width 50px
+    th.question
+      :width 500px
+      :text-align left
 
-      .maxpoint
-        :float left
-        :width 50px
+    th.answer
+      :width 50px
+      :text-align center
 
-      .practice
-        :float left
-        :width 150px
+    th.point
+      :width 50px
+      :text-align center
+
+    th.maxpoint
+      :width 50px
+      :text-align center
+
+    th.practice
+      :width 150px
+      :text-align left
+
+    td
+      :vertical-align top
+
+    td.question
+      :width 500px
+
+    td.answer
+      :width 50px
+      :text-align center
+
+    td.point
+      :width 50px
+      :text-align center
+
+    td.maxpoint
+      :width 50px
+      :text-align center
+
+    td.practice
+      :width 150px
 
 .footer
   :position relative
-  :width 800px
-  :height 100px
-  :background-color #CC9999
   :clear both
+  :width 800px
+  :height 20px
+  :border-width 1px 0px 0px 0px
+  :border-style solid
+  :border-color #8E8888
+  :color #6E6666
+  :font-size 9px
 

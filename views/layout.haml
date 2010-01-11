@@ -8,11 +8,14 @@
     %link{:rel=>"stylesheet", :type=>"text/css", :href=>"/style.css"}
   %body
     .header
-      %h1 abetterteam
-      %hr
+      %h1
+        - link_url = "http://#{env['HTTP_HOST']}/"
+        %a{:href => link_url}<
+          a
+          %span.big better
+          team
     .content!= yield
     .footer
-      %hr
       Managed by
       %a{:href => 'http://fkino.net'} Fumihiko Kinoshita
       |

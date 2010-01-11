@@ -23,12 +23,27 @@
 .detail
   - @quiz.each do |quiz|
     %h2= quiz["title"]
-    - quiz["items"].each_with_index do |item, index|
-      .item
+    %table
+      %tr
+        %th.question 質問
+        %th.answer 答え
+        %th.point 得点
+        %th.maxpoint 最高点
+        %th.practice XPプラクティス
+      - quiz["items"].each_with_index do |item, index|
         - answer = @result["#{quiz["category"]}#{index}"]
-        .question= item["question"]
-        .answer= {"yes" => "はい", "no" => "いいえ"}[answer]
-        .point= item["#{answer}_point"]
-        .maxpoint= [item["yes_point"], item["no_point"]].max
-        .practice= item["practice"]
+        - if index % 2 == 1
+          %tr.color1
+            %td.question= item["question"]
+            %td.answer= {"yes" => "はい", "no" => "いいえ"}[answer]
+            %td.point= item["#{answer}_point"]
+            %td.maxpoint= [item["yes_point"], item["no_point"]].max
+            %td.practice= item["practice"]
+        - else
+          %tr.color2
+            %td.question= item["question"]
+            %td.answer= {"yes" => "はい", "no" => "いいえ"}[answer]
+            %td.point= item["#{answer}_point"]
+            %td.maxpoint= [item["yes_point"], item["no_point"]].max
+            %td.practice= item["practice"]
 
