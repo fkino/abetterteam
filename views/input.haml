@@ -1,4 +1,4 @@
-%form{:action=>"/create", :method=>"post"}
+%form{:action=>"/create", :method=>"get"}
   - @quiz.each do |quiz|
     %h2= quiz["title"]
     - quiz["items"].each_with_index do |item, index|
