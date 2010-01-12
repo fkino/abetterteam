@@ -32,7 +32,7 @@
         %th.practice XPプラクティス
       - quiz["items"].each_with_index do |item, index|
         - answer = @result["#{quiz["category"]}#{index}"]
-        %tr{:class => index.odd? ? 'color1' : 'color2'}
+        %tr{:class => index % 2 == 1 ? 'color1' : 'color2'}
           %td.question= item["question"]
           %td.answer= {"yes" => "はい", "no" => "いいえ"}[answer]
           %td.point= item["#{answer}_point"]
