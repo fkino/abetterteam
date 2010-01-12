@@ -3,6 +3,7 @@ require 'sinatra'
 require 'haml'
 require 'yaml'
 require 'base64'
+require 'enumerator'
 
 helpers do
   def load_quiz
@@ -64,7 +65,7 @@ get '/quiz/:result' do
   @result = decode_param(params["result"])
 
   @quiz.each do |quiz|
-    quiz["point"] = quiz["items"].each_with_index.inject(0) {|point, (item, index)|
+    quiz["point"] = quiz["items"].enum_for(:each_with_index).inject(0) {|point, (item, index)|
       params_index = "#{quiz["category"]}#{index}"
       point + item["#{@result[params_index]}_point"].to_i
     }.to_s
