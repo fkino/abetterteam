@@ -21,12 +21,12 @@ describe Sinatra::Application do
     subject { last_response }
 
     it { should be_ok }
-    its(:body) { should =~ %r(<form action='/create' method='post'>) }
+    its(:body) { should =~ %r(<form action='/create' method='get'>) }
   end
 
-  describe 'post /create' do
+  describe 'get /create' do
     before do
-      post '/create', :thinking0 => 'yes', :thinking1 => 'no'
+      get '/create', :thinking0 => 'yes', :thinking1 => 'no'
     end
 
     subject { last_response }
